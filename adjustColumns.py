@@ -6,7 +6,7 @@ with open('output_1.txt') as csv_file, open('output_2.txt', mode='w') as csv_fil
     csv_reader = list(csv.reader(csv_file, delimiter=' '))
     csv_writer = csv.writer(csv_file2, delimiter=' ')
 
-    # count the widths of each columns
+    # count the max widths of each columns
     widths = [max(len(row[i]) for row in csv_reader) for i in range(len(csv_reader[0]))]
     nW = []
     #select the columns widths for the first two columns and insert in array with columns widhts
